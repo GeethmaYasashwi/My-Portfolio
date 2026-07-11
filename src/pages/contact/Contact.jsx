@@ -17,7 +17,7 @@ export default function Contact(){
     {
       icon:"fas fa-map-marker-alt",
       title:"Location",
-      value:"Anuradhapura, Sri Lanka"
+      value:"Colombo, Sri Lanka"
     },
     {
       icon:"fas fa-briefcase",
