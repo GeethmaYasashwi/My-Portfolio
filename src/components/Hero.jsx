@@ -29,7 +29,7 @@ export default function Hero({ onNavLinkClick }) {
                         View Projects
                     </a>
                     <a
-                        href="public/assests/Geethma_Yasashwi-CV.pdf"
+                        href="public/assests/GeethmaYasashwi-CV.pdf"
                         className="cta-button secondary"
                         download
                     >
