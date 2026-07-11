@@ -30,14 +30,14 @@ export default function Research(){
  const prev=()=>setActive((active-1+achievements.length)%achievements.length);
 
  return(
-    <section
-      id="skills"
-      className="skills"
-      style={{
-        backgroundImage: `linear-gradient(rgba(5,5,5,.8), rgba(5,5,5,.9)), url(${researchBg})`
-      }}
-    >
-
+  <section
+    ref={ref}
+    id="research"
+    className={`research ${show ? "show" : ""}`}
+    style={{
+      backgroundImage: `linear-gradient(rgba(5,5,5,.8), rgba(5,5,5,.9)), url(${researchBg})`
+    }}
+  >
    <h2>Research</h2>
 
    <div className="research-container">
