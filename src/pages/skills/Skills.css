@@ -1,0 +1,205 @@
+.skills{
+  --skill-primary:#ccc2c3;
+  --skill-secondary:#7c7c84;
+  --skill-dark:#484849;
+  width:100vw;
+  min-height:100vh;
+  padding:100px 8%;
+  background:#050505;
+  color:white;
+  font-family:"Montserrat",sans-serif;
+}
+
+.skills h2{
+  text-align:center;
+  font-size:3rem;
+  margin-bottom:4rem;
+  background:linear-gradient(135deg,var(--skill-primary),var(--skill-secondary),var(--skill-dark));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.skill-category-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin-bottom:3rem;
+}
+
+.skill-category-buttons button{
+  position:relative;
+  overflow:hidden;
+  padding:12px 22px;
+  border-radius:30px;
+  border:1px solid rgba(204,194,195,.3);
+  background:rgba(255,255,255,.05);
+  color:rgba(255,255,255,.85);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:.3s ease;
+  z-index:1;
+}
+
+.skill-category-buttons button::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,#ccc2c3,#7c7c84);
+  transform:translateX(-100%);
+  transition:.4s;
+  z-index:-1;
+}
+
+.skill-category-buttons button:hover::before,
+.skill-category-buttons button.active::before{
+  transform:translateX(0);
+}
+
+.skill-category-buttons button:hover,
+.skill-category-buttons button.active{
+  color:#050505;
+  border-color:transparent;
+}
+
+.skill-display{
+  max-width:950px;
+  margin:auto;
+  padding:2.5rem;
+  border-radius:22px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(204,194,195,.2);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter:blur(15px);
+  animation:categoryFade .45s ease;
+}
+
+.skill-display h3{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  color:#ccc2c3;
+  margin-bottom:2rem;
+  font-size:1.8rem;
+}
+
+.skill-icons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:1.4rem;
+}
+
+.skill-item{
+  width:120px;
+  min-height:125px;
+  padding:15px;
+  border-radius:15px;
+  background:rgba(255,255,255,.05);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  opacity:0;
+  animation:skillAppear .5s ease forwards;
+  transition:.3s ease;
+}
+
+.skill-item:nth-child(1){animation-delay:.05s}
+.skill-item:nth-child(2){animation-delay:.1s}
+.skill-item:nth-child(3){animation-delay:.15s}
+.skill-item:nth-child(4){animation-delay:.2s}
+.skill-item:nth-child(5){animation-delay:.25s}
+.skill-item:nth-child(6){animation-delay:.3s}
+.skill-item:nth-child(7){animation-delay:.35s}
+.skill-item:nth-child(8){animation-delay:.4s}
+.skill-item:nth-child(9){animation-delay:.45s}
+.skill-item:nth-child(10){animation-delay:.5s}
+
+.skill-item i{
+  font-size:2.4rem;
+}
+
+.skill-item img{
+  width:56px;
+  height:56px;
+  object-fit:contain;
+  display:block;
+  transition:.3s ease;
+}
+
+/* Only downloaded icons */
+.rounded-icon{
+  background:white;
+  padding:7px;
+  border-radius:16px;
+  width:56px!important;
+  height:56px!important;
+  object-fit:contain;
+  box-sizing:border-box;
+}
+
+.skill-item span{
+  text-align:center;
+  font-size:.85rem;
+  line-height:1.3;
+  min-height:35px;
+  display:flex;
+  align-items:center;
+  color:rgba(255,255,255,.85);
+}
+
+.skill-item:hover{
+  transform:translateY(-8px) scale(1.05);
+  background:rgba(204,194,195,.12);
+  box-shadow:0 0 25px rgba(204,194,195,.25);
+}
+
+.skill-item:hover img{
+  transform:scale(1.1);
+}
+
+@keyframes categoryFade{
+  from{
+    opacity:0;
+    transform:translateY(20px) scale(.97)
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1)
+  }
+}
+
+@keyframes skillAppear{
+  from{
+    opacity:0;
+    transform:translateY(25px)
+  }
+  to{
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+
+@media(max-width:900px){
+  .skills{
+    padding:70px 20px
+  }
+
+  .skills h2{
+    font-size:2.3rem
+  }
+
+  .skill-display{
+    padding:1.5rem
+  }
+
+  .skill-item{
+    width:110px;
+    min-height:115px
+  }
+}
