@@ -21,7 +21,7 @@ export default function About() {
         <div className="about-img-container">
           <div className="about-img-frame"></div>
           <div className="about-img-inner">
-            <img src="/images/IMG_0473.JPG" alt="Geethma Yasashwi" />
+            <img src="/images/portfolio.jpg" alt="Geethma Yasashwi" />
           </div>
         </div>
 
