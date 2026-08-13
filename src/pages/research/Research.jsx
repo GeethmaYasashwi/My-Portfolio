@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useRef} from 'react';
 import './Research.css';
-import sinhalaSignImg from "../../assets/images/sinhalasign.png";
+import sinhalaSignImg from "../../assets/images/sinsign.png";
 import researchBg from "../../assets/images/research.png";
 
 const achievements=[
@@ -49,7 +49,7 @@ export default function Research(){
     <div className="research-content">
 
      <h3>
-      SinhalaSign
+      SSLGen
       <span>Text-to-Gloss-to-Video Translation Framework</span>
      </h3>
 
